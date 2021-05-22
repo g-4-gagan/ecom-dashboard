@@ -1,7 +1,17 @@
-import {Navbar,Nav} from 'react-bootstrap';
+import {Navbar,Nav,NavDropdown} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 function Header(){
+
+    const history=useHistory();
+    const user = JSON.parse(localStorage.getItem('user-info'));
+    function logout()
+    {
+        localStorage.clear();
+        history.push('/register');
+
+    }
 	return(
 
 	<div>
@@ -19,6 +29,15 @@ function Header(){
                     <Link to="/register">Register</Link>
                     </>
                 }
+            </Nav>
+            <Nav>
+            {
+                localStorage.getItem('user-info')?
+                <NavDropdown title={user && user.name}>
+                  <NavDropdown.Item>Profile</NavDropdown.Item>
+                  <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
+                </NavDropdown>:null
+            }
             </Nav>
         </Navbar>
 	</div>
