@@ -8,7 +8,7 @@ function Register(){
     useEffect(()=>{
     if(localStorage.getItem('user-info'))
     {
-    	history.push('./add')
+    	history.push('./')
     }
     },[])
     const[name,setName]=useState("");
@@ -31,7 +31,7 @@ function Register(){
     result = await result.json();
     
     localStorage.setItem("user-info",JSON.stringify(result));
-    history.push('/add');
+    history.push('/');
 
     }
 

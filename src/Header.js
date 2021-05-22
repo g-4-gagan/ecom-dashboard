@@ -16,7 +16,7 @@ function Header(){
 
 	<div>
 		<Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Navbar.Brand href="/">Ecom</Navbar.Brand>
             <Nav className="mr-auto nav_bar_wrapper">
                 {
                     localStorage.getItem('user-info')?

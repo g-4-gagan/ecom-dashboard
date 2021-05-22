@@ -6,7 +6,7 @@ function Login(){
 	useEffect(()=>{
     if(localStorage.getItem('user-info'))
     {
-    	history.push('./add')
+    	history.push('./')
     }
     },[]);
     const history=useHistory();
@@ -33,7 +33,7 @@ function Login(){
     else
     {
     	localStorage.setItem("user-info",JSON.stringify(result));
-    	history.push('/add');
+    	history.push('/');
     }
 
     }

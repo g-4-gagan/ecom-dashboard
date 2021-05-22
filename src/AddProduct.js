@@ -1,4 +1,5 @@
 import Header  from './Header';
+import {useHistory} from 'react-router-dom';
 import React,{useState,useEffect} from 'react';
 
 function AddProduct(){
@@ -7,6 +8,7 @@ function AddProduct(){
 	const[file,setFile]=useState("");
     const[price,setPrice]=useState("");
     const[description,setDescription]=useState("");
+    const history=useHistory();
 
 	async function addProduct()
 	{
@@ -26,6 +28,8 @@ function AddProduct(){
         });
         result = await result.json();
         alert(result.status);
+        history.push('/');
+
 
 	}
 
