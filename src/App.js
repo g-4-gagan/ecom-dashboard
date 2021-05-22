@@ -6,6 +6,7 @@ import Login  from './Login';
 import Register  from './Register';
 import AddProduct  from './AddProduct';
 import UpdateProduct  from './UpdateProduct';
+import Protected  from './Protected';
 import {BrowserRouter,Route} from 'react-router-dom';
 
 
@@ -13,15 +14,11 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header/>
-      <Route path="/">
-      <h1>Hello World!</h1>
-      </Route>
       <Route path="/add">
-        <AddProduct/>
+        <Protected Cmp={AddProduct}/>
       </Route>
       <Route path="/update">
-        <UpdateProduct/>
+        <Protected Cmp={UpdateProduct}/>
       </Route>
       <Route path="/login">
         <Login/>
