@@ -14,7 +14,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Header/>
+      <Route path="/">
       <h1>Hello World!</h1>
+      </Route>
       <Route path="/add">
         <AddProduct/>
       </Route>
