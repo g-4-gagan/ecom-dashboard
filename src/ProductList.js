@@ -2,6 +2,7 @@ import Header  from './Header';
 import React,{useState,useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
 import {Table} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 function ProductList(){
 
@@ -41,7 +42,7 @@ function ProductList(){
            <th>Image</th>
            <th>Description</th>
            <th>Price</th>
-           <th>Operation</th>
+           <th>Operations</th>
        </tr>
        </thead>
        <tbody>
@@ -54,7 +55,8 @@ function ProductList(){
                <td><img style={{width: 140}} src={"http://ecom-backend.example.com/"+item.file_path}/></td>
                <td>{item.description}</td>
                <td>{item.price}</td>
-               <td><span className='delete' onClick={()=>{deleteOperation(item.id)}}>Delete</span></td>
+               <td><Link to={"/update/"+item.id}><span className='update'>Update</span></Link>
+               <span className='delete' onClick={()=>{deleteOperation(item.id)}}>Delete</span></td>
            </tr>)
         }
        </tbody>

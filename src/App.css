@@ -39,6 +39,16 @@
   padding : 4px;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 5px;
+}
+
+.update{
+  background-color: green;
+  color: white;
+  padding : 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
 }
 
 @keyframes App-logo-spin {
