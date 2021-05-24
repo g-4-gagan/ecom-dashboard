@@ -33,6 +33,14 @@
   color: #61dafb;
 }
 
+.delete{
+  background-color: #c21a1a;
+  color: white;
+  padding : 4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
