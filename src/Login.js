@@ -16,7 +16,7 @@ function Login(){
     async function signIn(){
       let item ={email,password};
       
-      let result = await fetch("http://ecom-backend.example.com/api/login",{
+      let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/login",{
       method:'POST',
       headers:{
       "Content-Type":"application/json",

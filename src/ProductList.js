@@ -14,7 +14,7 @@ function ProductList(){
 
   async function deleteOperation(id)
   {
-    let result = await fetch("http://ecom-backend.example.com/api/deleteProduct/"+id,{
+    let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/deleteProduct/"+id,{
             method:'DELETE'
         });
     result = await result.json();
@@ -24,7 +24,7 @@ function ProductList(){
   }
   async function getData()
   {
-    let result = await fetch("http://ecom-backend.example.com/api/productList");
+    let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/productList");
     result = await result.json();
     setData(result);
   }
@@ -52,7 +52,7 @@ function ProductList(){
            <tr key={item.id}>
                <td>{item.id}</td>
                <td>{item.name}</td>
-               <td><img style={{width: 140}} src={"http://ecom-backend.example.com/"+item.file_path}/></td>
+               <td><img style={{width: 140}} src={"https://radiant-woodland-09393.herokuapp.com/"+item.file_path}/></td>
                <td>{item.description}</td>
                <td>{item.price}</td>
                <td><Link to={"/update/"+item.id}><span className='update'>Update</span></Link>

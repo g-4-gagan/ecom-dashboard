@@ -19,7 +19,7 @@ function Register(){
     async function signUp(){
       let item ={name,email,password};
       
-      let result = await fetch("http://ecom-backend.example.com/api/register",{
+      let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/register",{
       method:'POST',
       headers:{
       "Content-Type":"application/json",

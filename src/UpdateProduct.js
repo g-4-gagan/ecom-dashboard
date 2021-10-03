@@ -14,7 +14,7 @@ function UpdateProduct(props){
 	const history=useHistory();
 
 	useEffect(async ()=>{
-		let result = await fetch("http://ecom-backend.example.com/api/getProduct/"+props.match.params.id);
+		let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/getProduct/"+props.match.params.id);
         result = await result.json();
         setData(result);
         setName(result.name);
@@ -30,7 +30,7 @@ function UpdateProduct(props){
 		formData.append('file',file);
 		formData.append('price',price);
 		formData.append('description',description);
-		let result = await fetch("http://ecom-backend.example.com/api/updateProduct/"+id+"?_method=PUT",{
+		let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/updateProduct/"+id+"?_method=PUT",{
             method:'POST',
             headers:{
                 "Accept":"application/json"
@@ -50,7 +50,7 @@ function UpdateProduct(props){
 		<h1>Update Product Page</h1>
 		<input type="text" placeholder="Product Name" defaultValue={data.name} onChange= {(e)=>setName(e.target.value)} className="form-control" /><br/>
 		<input type="file" placeholder="Product Image" onChange= {(e)=>setFile(e.target.files[0])} className="form-control" /><br/>
-		<img style={{width: 60}} src={"http://ecom-backend.example.com/"+data.file_path}/><br/><br/>
+		<img style={{width: 60}} src={"https://radiant-woodland-09393.herokuapp.com/"+data.file_path}/><br/><br/>
 		<input type="text" placeholder="Product Description" defaultValue={data.description} onChange= {(e)=>setDescription(e.target.value)} className="form-control" /><br/>
 		<input type="text" placeholder="Product Price" defaultValue={data.price} onChange= {(e)=>setPrice(e.target.value)} className="form-control" /><br/>
 		<button onClick ={()=>edit(data.id)} className="btn btn-primary"> Update Product </button>
