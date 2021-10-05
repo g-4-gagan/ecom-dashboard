@@ -10,7 +10,7 @@ function ProductList(){
   const history=useHistory();
 	useEffect(()=>{
 		getData();
-        console.log(process.env.REACT_APP_API_URL)
+        // console.log(process.env.REACT_APP_API_URL)
 	},[]);
 
   

@@ -19,7 +19,7 @@ function Register(){
     async function signUp(){
       let item ={name,email,password};
       
-      let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/register",{
+      let result = await fetch(`${process.env.REACT_APP_API_URL}/register`,{
       method:'POST',
       headers:{
       "Content-Type":"application/json",
