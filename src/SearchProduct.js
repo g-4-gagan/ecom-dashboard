@@ -10,7 +10,7 @@ function SearchProduct(){
 
   async function deleteOperation(id)
   {
-    let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/deleteProduct/"+id,{
+    let result = await fetch(`${process.env.REACT_APP_API_URL}/deleteProduct/`+id,{
             method:'DELETE'
         });
     result = await result.json();
@@ -21,7 +21,7 @@ function SearchProduct(){
   {
     if(key)
     {
-      let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/search/"+key);
+      let result = await fetch(`${process.env.REACT_APP_API_URL}/search/`+key);
       result = await result.json();
       setData(result);
     }

@@ -14,7 +14,7 @@ function UpdateProduct(props){
 	const history=useHistory();
 
 	useEffect(async ()=>{
-		let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/getProduct/"+props.match.params.id);
+		let result = await fetch(`${process.env.REACT_APP_API_URL}/getProduct/`+props.match.params.id);
         result = await result.json();
         setData(result);
         setName(result.name);
@@ -30,7 +30,7 @@ function UpdateProduct(props){
 		formData.append('file',file);
 		formData.append('price',price);
 		formData.append('description',description);
-		let result = await fetch("https://radiant-woodland-09393.herokuapp.com/api/updateProduct/"+id+"?_method=PUT",{
+		let result = await fetch(`${process.env.REACT_APP_API_URL}/updateProduct/`+id+"?_method=PUT",{
             method:'POST',
             headers:{
                 "Accept":"application/json"
