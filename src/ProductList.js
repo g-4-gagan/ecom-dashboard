@@ -27,7 +27,7 @@ function ProductList(){
   }
   async function getData()
   {
-    let result = await fetch(process.env.REACT_APP_API_URL+"/productList");
+    let result = await fetch(`${process.env.REACT_APP_API_URL}/productList`);
     result = await result.json();
     setData(result);
   }
