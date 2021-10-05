@@ -14,12 +14,11 @@ function AddProduct(){
 	{
 		let product ={name,file,price,description};
 		const formData = new FormData;
-		formData.append('name',name);
 		formData.append('file',file);
 		formData.append('price',price);
 		formData.append('description',description);
 
-		let result = await fetch(`https://radiant-woodland-09393.herokuapp.com/api/addProduct`,{
+		let result = await fetch(`${process.env.REACT_APP_API_URL}/addProduct`,{
             method:'POST',
             headers:{
                 "Accept":"application/json"
