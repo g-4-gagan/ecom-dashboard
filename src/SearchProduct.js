@@ -56,7 +56,7 @@ function SearchProduct(){
            <tr key={item.id}>
                <td>{item.id}</td>
                <td>{item.name}</td>
-               <td><img style={{width: 140}} src={"https://radiant-woodland-09393.herokuapp.com/"+item.file_path}/></td>
+               <td><img style={{width: 140}} src={item.file_path}/></td>
                <td>{item.description}</td>
                <td>{item.price}</td>
                <td><Link to={"/update/"+item.id}><span className='update'>Update</span></Link>
