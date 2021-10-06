@@ -14,6 +14,7 @@ function AddProduct(){
 	{
 		let product ={name,file,price,description};
 		const formData = new FormData;
+		formData.append('name',name);
 		formData.append('file',file);
 		formData.append('price',price);
 		formData.append('description',description);
