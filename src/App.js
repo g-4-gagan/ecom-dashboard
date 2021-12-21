@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Switch>
+      {/*<Switch>
       <Route path="/add">
         <Protected Cmp={AddProduct}/>
       </Route>
@@ -30,12 +30,12 @@ function App() {
       </Route>
       <Route path="/register">
         <Register/>
-      </Route>
+      </Route>*/}
       <Route path="/">
-        // <Protected Cmp={ProductList}/>
+        {/*<Protected Cmp={ProductList}/>*/}
         <ProductList/>
       </Route>
-      </Switch>
+      {/*</Switch>*/}
       </BrowserRouter>
     </div>
   );

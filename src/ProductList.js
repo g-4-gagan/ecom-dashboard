@@ -67,7 +67,7 @@ function ProductList(){
       </Table>
 	</div>*/}
     <h1>Hey there</h1>
-    <img src={abc} height="30" width="auto"/>
+    <img src={abc}/>
 	</>
 
 	);
