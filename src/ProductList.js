@@ -64,8 +64,8 @@ function ProductList(){
         }
        </tbody>
       </Table>
-	</div>
-	</>
+    </div>
+    </>
 
 	);
 }
