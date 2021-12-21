@@ -33,7 +33,7 @@ function App() {
       </Route>
       <Route path="/">
         // <Protected Cmp={ProductList}/>
-        <ProductList>
+        <ProductList/>
       </Route>
       </Switch>
       </BrowserRouter>
