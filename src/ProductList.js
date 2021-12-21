@@ -3,6 +3,7 @@ import React,{useState,useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
 import {Table} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import abc from './sdjn.jpg';
 
 function ProductList(){
 
@@ -34,7 +35,7 @@ function ProductList(){
 
 	return(
 	<>
-    <Header/>
+    {/*<Header/>
 	<div className="col-sm-8 offset-sm-2">
 	   <h1>Products List</h1>
 	   <Table striped bordered hover>
@@ -64,7 +65,9 @@ function ProductList(){
         }
        </tbody>
       </Table>
-	</div>
+	</div>*/}
+    <h1>Hey there</h1>
+    <img src={abc} height="30" width="auto"/>
 	</>
 
 	);
